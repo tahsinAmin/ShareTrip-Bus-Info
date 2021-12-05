@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function Navbar() {
    return (   
-      <nav className="border-2 bg-white border-gray-200 px-2 sm:px-4 py-5 rounded dark:bg-gray-800">
+      <nav className="bg-white border-gray-200 px-2 sm:px-4 py-5 rounded dark:bg-gray-800">
          <div className="w-4/5 mx-auto flex flex-wrap items-center justify-between">
             <a href="#" className="flex">
                <div className="relative h-12 w-48 cursor-pointer my-auto"> 
