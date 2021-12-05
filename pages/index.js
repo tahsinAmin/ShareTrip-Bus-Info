@@ -1,14 +1,19 @@
 import Head from 'next/head'
+import SearchModifier from '../components/SearchModifier'
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div className="min-h-screen">
       <Head>
-        <title>Create Next App</title>
+        <title>ShareTrip</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
+      <main>
+        <SearchModifier/>
+      </main>
+
+      {/* <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
         <h1 className="text-6xl font-bold">
           Welcome to{' '}
           <a className="text-blue-600" href="https://nextjs.org">
@@ -64,7 +69,7 @@ export default function Home() {
             </p>
           </a>
         </div>
-      </main>
+      </main> */}
 
       <footer className="flex items-center justify-center w-full h-24 border-t">
         <a
