@@ -1,4 +1,3 @@
-import Head from "next/head";
 import SearchModifier from "../components/SearchModifier";
 import FilterPanel from "../components/FilterPanel";
 import BusInfo from "../components/BusInfo";
@@ -6,14 +5,9 @@ import BusInfo from "../components/BusInfo";
 export default function Home() {
   return (
     <div className='min-h-screen m-0 p-0 box-border'>
-      <Head>
-        <title>ShareTrip</title>
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
-
       <main>
         <SearchModifier />
-        <div className='flex mt-4 w-4/5 mx-auto space-x-4'>
+        <div className='flex mt-4 max-w-7xl mx-auto space-x-4'>
           <FilterPanel />
           <BusInfo />
         </div>
