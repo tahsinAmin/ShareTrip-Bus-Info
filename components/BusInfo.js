@@ -1,6 +1,7 @@
 import React from "react";
 import Panel from "./Panel";
 import SwipeToSlide from "./SwipeToSlide";
+import List from "./List";
 
 export default function BusInfo() {
   return (
@@ -10,6 +11,7 @@ export default function BusInfo() {
         <SwipeToSlide />
       </div>
       <Panel />
+      <List />
     </div>
   );
 }

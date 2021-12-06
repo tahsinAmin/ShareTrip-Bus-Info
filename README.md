@@ -35,8 +35,11 @@ Things I have learned through this:
 - Customizing Carousal
 - Tailwind on how to use ::before => before:none before:h-0
 
-<!-- npm i @material-ui/icons -->
-<!-- npm i @material-ui/core -->
+TODOS:
+
+- How to make icons have different color when the buttons is active?
+  <!-- npm i @material-ui/icons -->
+  <!-- npm i @material-ui/core -->
 
 npm uninstalled:
 

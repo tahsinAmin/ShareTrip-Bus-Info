@@ -59,7 +59,7 @@ export default class SwipeToSlide extends Component {
       className: "center",
       infinite: true,
       centerPadding: "60px",
-      slidesToShow: 5,
+      slidesToShow: 6,
       swipeToSlide: true,
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />,
@@ -73,8 +73,13 @@ export default class SwipeToSlide extends Component {
       <Slider {...settings}>
         {data.map((b) => {
           return (
-            <div className='border-2 border-l-0 border-g-l p-2' key={b.name}>
-              <h3 className='font-regular text-black truncate'>{b.name}</h3>
+            <div
+              className='border-2 border-l-0 border-g-l p-2 w-40'
+              key={b.name}
+            >
+              <p className='font-regular text-black truncate text-sm'>
+                {b.name}
+              </p>
               <p className='text-gray-600'>{b.quantity}</p>
             </div>
           );
