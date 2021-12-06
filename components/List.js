@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function List() {
   return (
-    <div className=' my-4 flex'>
-      <div className='left-side w-2/3 border-2 flex flex-col p-4'>
+    <div className='my-4 flex border-2 border-gray-200 rounded-md '>
+      <div className='left-side w-2/3   flex flex-col p-4 '>
         <div className='top flex justify-between items-center'>
           <p className='font-semibold'>AC</p>
           <div className='title'>
@@ -25,7 +25,42 @@ export default function List() {
             <p className='font-semibold'>55</p>
           </div>
         </div>
-        <div className='middle'></div>
+        <div className='middle flex justify-between mt-2'>
+          <div className='from flex flex-col'>
+            <p className='text-xs font-normal text-gray-600'>From</p>
+            <p className='text-md font-regular uppercase'>
+              Dhaka <span className='text-md font-semibold'>11:30 PM</span>
+            </p>
+            <p className='text-xs font-semibold text-gray-600'>
+              Kolabagan Counter
+            </p>
+            <p className='text-xs font-normal text-gray-600'>22 June 2021</p>
+          </div>
+          <div className='icon flex flex-col'>
+            <div className='relative h-8 w-40 cursor-pointer my-auto'>
+              <Image
+                src='/img/car-direction.png'
+                layout='fill'
+                objectFit='contain'
+                className=''
+              />
+            </div>
+            <p className='text-sm text-red-600 text-center'>
+              16 Seats available
+            </p>
+            <p className='text-xs text-gray-600 text-center'>6h 00m</p>
+          </div>
+          <div className='to flex flex-col'>
+            <p className='text-xs font-normal text-gray-600'>To</p>
+            <p className='text-md font-regular uppercase'>
+              Chottogram <span className='text-md font-semibold'>05:30 AM</span>
+            </p>
+            <p className='text-xs font-semibold text-gray-600'>
+              Dampara Counter
+            </p>
+            <p className='text-xs font-normal text-gray-600'>23 June 2021</p>
+          </div>
+        </div>
       </div>
       <div className='right-side w-1/3 p-4 bg-blue-200 flex flex-col space-y-3 text-right rounded-r-md'>
         <div className='flex flex-col'>

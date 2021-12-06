@@ -40,9 +40,14 @@ TODOS:
 - Panels items shouldn't be at center but rather left with left padding
 - When I inspect it to 1920, the width increase along the width screen. It should be stick no matter how much increases.
 - How to make icons have different color when the buttons is active?
+- Navbar and Search Modifier needs to be fixed at the top
+- Ticket 3 having extra space between border and right
+- Ticket 3 has an upper side and a lower side which is empty, lower side remaining
 
   <!-- npm i @material-ui/icons -->
   <!-- npm i @material-ui/core -->
+
+Task Problem:
 
 npm uninstalled:
 

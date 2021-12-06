@@ -13,7 +13,7 @@ export default function Home() {
 
       <main>
         <SearchModifier />
-        <div className='flex mt-4 w-4/5 mx-auto space-x-1'>
+        <div className='flex mt-4 w-4/5 mx-auto space-x-4'>
           <FilterPanel />
           <BusInfo />
         </div>
