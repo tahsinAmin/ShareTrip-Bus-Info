@@ -28,4 +28,16 @@ yarn create next-app --example with-tailwindcss with-tailwindcss-app
 
 Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
 
-Adding Custom Colors
+Things I have learned through this:
+
+- Adding Custom Colors
+- React Slick
+- Tailwind on how to use ::before => before:none before:h-0
+
+<!-- npm i @material-ui/icons -->
+<!-- npm i @material-ui/core -->
+
+npm uninstalled:
+
+<!-- npm install react-slick -->
+<!-- npm install slick-carousal -->
