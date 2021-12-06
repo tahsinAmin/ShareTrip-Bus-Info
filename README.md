@@ -32,6 +32,7 @@ Things I have learned through this:
 
 - Adding Custom Colors
 - React Slick
+- Customizing Carousal
 - Tailwind on how to use ::before => before:none before:h-0
 
 <!-- npm i @material-ui/icons -->

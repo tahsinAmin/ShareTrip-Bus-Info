@@ -3,19 +3,43 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import Image from "next/image";
+// import Image from "next/image";
 import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={`${className} -left-10 p-2 py-5 shadow-md before:none before:h-0  rounded-l-md`}
+      style={{
+        ...style,
+        display: "block",
+        background: "white",
+        color: "black",
+        width: "40px",
+        height: "99%",
+        border: "2px solid #EAEAEA",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+      onClick={onClick}
+    >
+      <ArrowBackIos className='text-gray-400' />
+    </div>
+  );
+}
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className={`${className} p-2 py-5 shadow-md before:none before:h-0`}
+      className={`${className} p-2 py-5 shadow-md before:none before:h-0 rounded-r-md`}
       style={{
         ...style,
         background: "white",
         color: "black",
-        width: "28px",
+        width: "40px",
         height: "100%",
         border: "2px solid #EAEAEA",
         display: "flex",
@@ -25,30 +49,6 @@ function SampleNextArrow(props) {
       onClick={onClick}
     >
       <ArrowForwardIos className='text-gray-400' />
-    </div>
-  );
-}
-
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={`${className} p-2 py-5 shadow-md before:none before:h-0`}
-      style={{
-        ...style,
-        display: "block",
-        background: "white",
-        color: "black",
-        width: "28px",
-        height: "99%",
-        border: "2px solid #EAEAEA",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "left",
-      }}
-      onClick={onClick}
-    >
-      <ArrowBackIos className='text-gray-400' />
     </div>
   );
 }
@@ -74,8 +74,8 @@ export default class SwipeToSlide extends Component {
         {data.map((b) => {
           return (
             <div className='border-2 border-l-0 border-g-l p-2' key={b.name}>
-              <h3 className='font-semibold truncate'>{b.name}</h3>
-              <p>{b.quantity}</p>
+              <h3 className='font-regular text-black truncate'>{b.name}</h3>
+              <p className='text-gray-600'>{b.quantity}</p>
             </div>
           );
         })}
