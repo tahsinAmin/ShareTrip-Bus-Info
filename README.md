@@ -37,7 +37,10 @@ Things I have learned through this:
 
 TODOS:
 
+- Panels items shouldn't be at center but rather left with left padding
+- When I inspect it to 1920, the width increase along the width screen. It should be stick no matter how much increases.
 - How to make icons have different color when the buttons is active?
+
   <!-- npm i @material-ui/icons -->
   <!-- npm i @material-ui/core -->
 
