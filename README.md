@@ -34,15 +34,17 @@ Things I have learned through this:
 - React Slick
 - Customizing Carousal
 - Tailwind on how to use ::before => before:none before:h-0
+- To give border 1px, just write border, that's all
+- Navbar using Headless UI
 
 TODOS:
 
 [x] Panels items shouldn't be at center but rather left with left padding
 [x] When I inspect it to 1920, the width increase along the width screen. It should be stick no matter how much increases.
+[x] Navbar and Search Modifier needs to be fixed at the top
+[x] Ticket 3 having extra space between border and right
+[] Narbar hover color needs to be corrected.
 
-- Navbar and Search Modifier needs to be fixed at the top
-- Ticket 3 having extra space between border and right
-- Ticket 3 has an upper side and a lower side which is empty, lower side remaining
 - Make it responsive
 - How to make icons have different color when the buttons is active?
 

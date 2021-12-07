@@ -8,9 +8,14 @@ export default function Layout({ children }) {
       <Head>
         <title>ShareTrip</title>
         <link rel='icon' href='/favicon.ico' />
+        <link
+          rel='stylesheet'
+          href='https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css'
+        />
       </Head>
       <Navbar />
       {children}
+      <script src='https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js'></script>
     </div>
   );
 }

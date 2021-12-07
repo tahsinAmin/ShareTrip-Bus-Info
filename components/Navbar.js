@@ -1,254 +1,364 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
+import { Transition } from "@headlessui/react";
+import { Link } from "react-scroll";
 
 export default function Navbar() {
+  // useState is use to change the state for start it false means when we click then only its open otherwise not.
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className='bg-white border-gray-200 px-2 sm:px-4 py-5 rounded dark:bg-gray-800'>
-      <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>
-        <a href='#' className='flex'>
-          <div className='relative h-12 w-48 cursor-pointer my-auto'>
-            <Image
-              src='/img/navbar-brand.png'
-              layout='fill'
-              objectFit='cover'
-              className=''
-            />
-          </div>
-        </a>
-        <div className='flex items-center md:order-2'>
-          <div className='flex '>
-            <div className='relative h-10 w-28 cursor-pointer my-auto'>
-              <Image
-                src='/img/Spin-to-win.png'
-                layout='fill'
-                objectFit='contain'
-                className=''
-              />
-            </div>
-            <div className='relative h-10 w-24 cursor-pointer my-auto'>
-              <Image
-                src='/img/Profile.png'
-                layout='fill'
-                objectFit='contain'
-                className=''
-              />
-            </div>
-          </div>
-          {/* <button type="button" className="mr-3 md:mr-0 bg-gray-800 flex text-sm rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="dropdown">
-                  <span className="sr-only">Open user menu</span>
-                  <img className="h-8 w-8 rounded-full" src="/docs/images/people/profile-picture-3.jpg" alt="user photo"/>
-               </button> */}
-
-          <div
-            className='hidden bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4 dark:bg-gray-700 dark:divide-gray-600'
-            id='dropdown'
-          >
-            <div className='px-4 py-3'>
-              <span className='text-gray-900 block text-sm dark:text-white'>
-                Bonnie Green
-              </span>
-              <span className='text-gray-500 block text-sm font-medium truncate dark:text-gray-400'>
-                name@flowbite.com
-              </span>
-            </div>
-            <ul className='py-1' aria-labelledby='dropdown'>
-              <li>
-                <a
-                  href='#'
-                  className='text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white'
+    <nav className='shadow-sm sticky top-0 w-full z-10 bg-white'>
+      <div className='md:max-w-7xl mx-auto'>
+        <div className='flex items-center h-20 w-full'>
+          <div className='flex items-center px-2 justify-between w-full'>
+            <a href='#' className='Brand flex'>
+              <div className='hidden sm:block relative h-12 w-48  cursor-pointer my-auto'>
+                <Image
+                  src='/img/navbar-brand.png'
+                  layout='fill'
+                  objectFit='cover'
+                  className=''
+                />
+              </div>
+              <div className='block sm:hidden relative h-8 w-8  cursor-pointer my-auto'>
+                <Image
+                  src='/img/circle-icon.png'
+                  layout='fill'
+                  objectFit='cover'
+                  className=''
+                />
+              </div>
+            </a>
+            {/* For small screen we don't show tabs that's why written hiddenand on medium device i.e. md
+            We want them as block */}
+            <div className='middle-links hidden sm:block'>
+              <div className='flex space-x-4'>
+                {/* Link carry some of the propeeties like activeClass i.e. on current page,
+              to i.e. on bus page if there, smooth i.e. transition between tabs,
+              offset i.e. time interval transition. duration i.e. how much time it will change. */}
+                <Link
+                  activeClass='flight'
+                  to='flight'
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                  className='cursor-pointer text-blue-600 font-semibold  py-2 text-sm hover:font-black'
                 >
                   Flight
-                </a>
-              </li>
-              <li>
-                <a
-                  href='#'
-                  className='text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white'
+                </Link>
+                <Link
+                  activeClass='bus'
+                  to='bus'
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                  className='cursor-pointer hover:bg-blue-600 text-black  hover:text-white  py-2 text-sm font-medium'
                 >
                   Bus
-                </a>
-              </li>
-              <li>
-                <a
-                  href='#'
-                  className='text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white'
+                </Link>
+                <Link
+                  activeClass='hotel'
+                  to='hotel'
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                  className='cursor-pointer hover:bg-blue-600 text-black  hover:text-white  py-2 text-sm font-medium'
                 >
                   Hotel
-                </a>
-              </li>
-              <li>
-                <a
-                  href='#'
-                  className='text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white'
+                </Link>
+                <Link
+                  activeClass='holiday'
+                  to='holiday'
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                  className='cursor-pointer hover:bg-blue-600 text-black  hover:text-white  py-2 text-sm font-medium'
                 >
                   Holiday
-                </a>
-              </li>
-              <li>
-                <a
-                  href='#'
-                  className='text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white'
+                </Link>
+                <Link
+                  activeClass='visa'
+                  to='visa'
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                  className='cursor-pointer hover:bg-black text-black  hover:text-white  py-2 text-sm font-medium'
                 >
                   Visa
-                </a>
-              </li>
-              <li>
-                <a
-                  href='#'
-                  className='text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white'
+                </Link>
+                <Link
+                  activeClass='visa-guide'
+                  to='visa-guide'
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                  className='cursor-pointer truncate hover:bg-black text-black  hover:text-white  py-2 text-sm font-medium'
                 >
                   Visa Guide
-                </a>
-              </li>
-              <li>
-                <a
-                  href='#'
-                  className='text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white'
+                </Link>
+                <Link
+                  activeClass='group-request'
+                  to='group-request'
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                  className='sm:hidden md:block truncate cursor-pointer hover:bg-black text-black  hover:text-white  py-2 text-sm font-medium'
+                >
+                  Group Request
+                </Link>
+                <Link
+                  activeClass='travel-advisory'
+                  to='travel-advisory'
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                  className='sm:hidden lg:block truncate cursor-pointer hover:bg-black text-black  hover:text-white  py-2 text-sm font-medium'
                 >
                   Travel Advisory
-                </a>
-              </li>
-              <li>
-                <a
-                  href='#'
-                  className='text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white'
+                </Link>
+                <Link
+                  activeClass='promotions'
+                  to='promotions'
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                  className='sm:hidden lg:block cursor-pointer hover:bg-black text-black  hover:text-white  py-2 text-sm font-medium'
                 >
                   Promotions
-                </a>
-              </li>
-              <li>
-                <a
-                  href='#'
-                  className='text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white'
+                </Link>
+                <Link
+                  activeClass='blog'
+                  to='blog'
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                  className='sm:hidden xl:block cursor-pointer hover:bg-black text-black  hover:text-white  py-2 text-sm font-medium'
                 >
                   Blog
-                </a>
-              </li>
-            </ul>
+                </Link>
+              </div>
+            </div>
+
+            <div className='flex space-x-1'>
+              <a className=' extra-image-links flex md:order-2' href='#'>
+                <div className='hidden xl:block relative h-10 w-28  cursor-pointer my-auto'>
+                  <Image
+                    src='/img/spin-to-win.png'
+                    layout='fill'
+                    objectFit='cover'
+                    className=''
+                  />
+                </div>
+                <div className='block xl:hidden relative h-8 w-8  cursor-pointer my-auto'>
+                  <Image
+                    src='/img/spin.png'
+                    layout='fill'
+                    objectFit='contain'
+                    className=''
+                  />
+                </div>
+              </a>
+              <a className=' extra-image-links flex md:order-2' href='#'>
+                <div className='block relative h-8 w-20 md:h-10 md:w-24 cursor-pointer my-auto'>
+                  <Image
+                    src='/img/profile.png'
+                    layout='fill'
+                    objectFit='contain'
+                    className=''
+                  />
+                </div>
+              </a>
+            </div>
           </div>
-          <button
-            data-collapse-toggle='mobile-menu-2'
-            type='button'
-            className='md:hidden ml-1 text-gray-500 hover:bg-gray-100focus:outline-none focus:ring-2 focus:ring-gray-200 rounded-lg text-sm p-2 inline-flex items-center dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600'
-            aria-controls='mobile-menu-2'
-            aria-expanded='false'
-          >
-            <span className='sr-only'>Open main menu</span>
-            <svg
-              className='w-6 h-6'
-              fill='currentColor'
-              viewBox='0 0 20 20'
-              xmlns='http://www.w3.org/2000/svg'
+          {/* Now we hotel on mobile responsive */}
+
+          <div className='mr-10 flex sm:hidden'>
+            {/* It has some property like when we click what will happen on mobile */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              type='button'
+              className='bg-blue-600 inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-blue-600 focus:outline-none focus:ring-offset-2 focus:ring0offset-blue-800 focus:ring-white'
+              aria-controls='mobile-menu'
+              aria-expanded='false'
             >
-              <path
-                fillRule='evenodd'
-                d='M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z'
-                clipRule='evenodd'
-              ></path>
-            </svg>
-            <svg
-              className='hidden w-6 h-6'
-              fill='currentColor'
-              viewBox='0 0 20 20'
-              xmlns='http://www.w3.org/2000/svg'
-            >
-              <path
-                fillRule='evenodd'
-                d='M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z'
-                clipRule='evenodd'
-              ></path>
-            </svg>
-          </button>
-        </div>
-        <div
-          className='hidden md:flex justify-between items-center w-full md:w-auto md:order-1'
-          id='mobile-menu-2'
-        >
-          <ul className='flex-col md:flex-row flex md:space-x-4 mt-4 md:mt-0 md:text-sm md:font-medium'>
-            <li>
-              <a
-                href='#'
-                className='bg-blue-700 md:bg-transparent text-white block pl-3 pr-4 py-2 md:text-blue-700 md:p-0 rounded dark:text-white'
-                aria-current='page'
-              >
-                Flight
-              </a>
-            </li>
-            <li>
-              <a
-                href='#'
-                className='text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'
-              >
-                Bus
-              </a>
-            </li>
-            <li>
-              <a
-                href='#'
-                className='text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'
-              >
-                Hotel
-              </a>
-            </li>
-            <li>
-              <a
-                href='#'
-                className='text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'
-              >
-                Holiday
-              </a>
-            </li>
-            <li>
-              <a
-                href='#'
-                className='text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'
-              >
-                Visa
-              </a>
-            </li>
-            <li>
-              <a
-                href='#'
-                className='text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'
-              >
-                Visa Guide
-              </a>
-            </li>
-            <li>
-              <a
-                href='#'
-                className='text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'
-              >
-                Group Request
-              </a>
-            </li>
-            <li>
-              <a
-                href='#'
-                className='text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'
-              >
-                Travel Advisory
-              </a>
-            </li>
-            <li>
-              <a
-                href='#'
-                className='text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'
-              >
-                Promotions
-              </a>
-            </li>
-            <li>
-              <a
-                href='#'
-                className='text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'
-              >
-                Blog
-              </a>
-            </li>
-          </ul>
+              <span className='sr-only'>Open main menu</span>
+              {/* basically i am taking the menu icon from w3 website  */}
+              {/* here d is the shape code. */}
+              {!isOpen ? (
+                <svg
+                  className='block h-6 w-6'
+                  xmlns='https:www.w3.org/2000/svg'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  stroke='currentColor'
+                  aria-hidden='true'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth='2'
+                    d='M4 6h16M4 12h16M4 18h16' // for menu shape
+                  />
+                </svg>
+              ) : (
+                <svg
+                  className='block h-6 w-6'
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  stroke='currentColor'
+                  aria-hidden='true'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth='2'
+                    d='M6 18L18 6M6 6l12 12' // for cross shape
+                  />
+                </svg>
+              )}
+            </button>
+          </div>
         </div>
       </div>
+      {/* we include transition from headlessui from smoothness in  mobile epxerience  */}
+      <Transition
+        show={isOpen}
+        enter='transition ease-out duration-100 transform'
+        enterFrom='opacity-0 scale-95'
+        enterTo='opacity-100 scale-100'
+        leave='transition ease-in duration-75 transform'
+        leaveFrom='opacity-100 scale-100'
+        leaveTo='opacity-0 scale-95'
+      >
+        {(ref) => (
+          // handle the mobile menu tabs
+          <div className='md:hidden' id='mobile-menu'>
+            <div
+              ref={ref}
+              className='bg-white px-2 pt-2 pb-3 space-y-1 sm:px-3'
+            >
+              <Link
+                href='/flight'
+                activeClass='flight'
+                to='flight'
+                smooth={true}
+                offset={50}
+                duration={500}
+                className='cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium'
+              >
+                Flight
+              </Link>
+              <Link
+                href='/bus'
+                activeClass='bus'
+                to='bus'
+                smooth={true}
+                offset={50}
+                duration={500}
+                className='cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium'
+              >
+                Bus
+              </Link>
+
+              <Link
+                href='/hotel'
+                activeClass='hotel'
+                to='hotel'
+                smooth={true}
+                offset={50}
+                duration={500}
+                className='cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium'
+              >
+                Projects
+              </Link>
+              <Link
+                href='/holiday'
+                activeClass='holiday'
+                to='holiday'
+                smooth={true}
+                offset={50}
+                duration={500}
+                className='cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium'
+              >
+                holiday
+              </Link>
+
+              <Link
+                href='/visa'
+                activeClass='visa'
+                to='visa'
+                smooth={true}
+                offset={50}
+                duration={500}
+                className='cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium'
+              >
+                visa
+              </Link>
+
+              <Link
+                href='/visa-guide'
+                activeClass='visa-guide'
+                to='visa-guide'
+                smooth={true}
+                offset={50}
+                duration={500}
+                className='cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium'
+              >
+                Visa Guide
+              </Link>
+
+              <Link
+                href='/group-request'
+                activeClass='group-request'
+                to='group-request'
+                smooth={true}
+                offset={50}
+                duration={500}
+                className='cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium'
+              >
+                Group Request
+              </Link>
+
+              <Link
+                href='/travel-advisory'
+                activeClass='travel-advisory'
+                to='travel-advisory'
+                smooth={true}
+                offset={50}
+                duration={500}
+                className='cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium'
+              >
+                Travel Advisory
+              </Link>
+
+              <Link
+                href='/promotions'
+                activeClass='promotions'
+                to='promotions'
+                smooth={true}
+                offset={50}
+                duration={500}
+                className='cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium'
+              >
+                Promotions
+              </Link>
+
+              <Link
+                href='/blog'
+                activeClass='blog'
+                to='blog'
+                smooth={true}
+                offset={50}
+                duration={500}
+                className='cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium'
+              >
+                Blog
+              </Link>
+            </div>
+          </div>
+        )}
+      </Transition>
     </nav>
   );
 }

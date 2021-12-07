@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function List() {
   return (
-    <div className='my-4 flex border-2 border-gray-200 rounded-md '>
-      <div className='left-side w-2/3   flex flex-col p-4 '>
+    <div className='my-4 flex  '>
+      <div className='left-side w-2/3   flex flex-col p-4 border border-gray-200 rounded-l-md border-r-0'>
         <div className='top flex justify-between items-center'>
           <p className='font-semibold'>AC</p>
           <div className='title'>
