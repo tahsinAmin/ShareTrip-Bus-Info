@@ -31,7 +31,7 @@ export default function Navbar() {
             </a>
             {/* For small screen we don't show tabs that's why written hiddenand on medium device i.e. md
             We want them as block */}
-            <div className='middle-links hidden sm:block'>
+            <div className='middle-links hidden md:block'>
               <div className='flex space-x-4'>
                 {/* Link carry some of the propeeties like activeClass i.e. on current page,
               to i.e. on bus page if there, smooth i.e. transition between tabs,
@@ -149,17 +149,9 @@ export default function Navbar() {
                     className=''
                   />
                 </div>
-                <div className='block xl:hidden relative h-8 w-8  cursor-pointer my-auto'>
-                  <Image
-                    src='/img/spin.png'
-                    layout='fill'
-                    objectFit='contain'
-                    className=''
-                  />
-                </div>
               </a>
-              <a className=' extra-image-links flex md:order-2' href='#'>
-                <div className='block relative h-8 w-20 md:h-10 md:w-24 cursor-pointer my-auto'>
+              <a className='extra-image-links flex md:order-2' href='#'>
+                <div className='hidden md:block relative h-8 w-20 md:h-10 md:w-24 cursor-pointer my-auto'>
                   <Image
                     src='/img/profile.png'
                     layout='fill'
@@ -172,7 +164,7 @@ export default function Navbar() {
           </div>
           {/* Now we hotel on mobile responsive */}
 
-          <div className='mr-10 flex sm:hidden'>
+          <div className='mr-10 flex md:hidden'>
             {/* It has some property like when we click what will happen on mobile */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -355,6 +347,43 @@ export default function Navbar() {
               >
                 Blog
               </Link>
+              <div className='my-4'>
+                <div className='border-2 border-t-gray-200 border-x-0 border-b-0 my-5' />
+              </div>
+              <Link
+                href='/signin'
+                activeClass='signin'
+                to='signin'
+                smooth={true}
+                offset={50}
+                duration={500}
+                className='cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium'
+              >
+                Sign In
+              </Link>
+
+              <Link
+                href='/create'
+                activeClass='create'
+                to='create'
+                smooth={true}
+                offset={50}
+                duration={500}
+                className='cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium'
+              >
+                Create an Account
+              </Link>
+              <button className='border-2 border-gray-200 p-2 ml-3 px-3 rounded-lg flex space-x-1'>
+                <div className='block xl:hidden relative h-5 w-5  cursor-pointer my-auto'>
+                  <Image
+                    src='/img/spin.png'
+                    layout='fill'
+                    objectFit='contain'
+                    className=''
+                  />
+                </div>
+                <p>Spin To Win</p>
+              </button>
             </div>
           </div>
         )}
