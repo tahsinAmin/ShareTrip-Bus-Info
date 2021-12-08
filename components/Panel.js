@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Panel() {
   return (
-    <div className='grid grid-cols-4 text-center shadow-md'>
+    <div className='grid grid-cols-2 sm:grid-cols-4 text-center shadow-md'>
       <div className='border-2 border-r-0 pl-4 rounded-l-md'>
         <div className=' flex items-center'>
           <div className='relative h-7 w-7 cursor-pointer my-auto mr-2 py-6'>

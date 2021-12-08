@@ -63,28 +63,50 @@ export default class SwipeToSlide extends Component {
       swipeToSlide: true,
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />,
-      afterChange: function (index) {
-        console.log(
-          `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
-        );
-      },
+      // afterChange: function (index) {
+      //   console.log(
+      //     `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
+      //   );
+      // },
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 4,
+          },
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 3,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 2,
+          },
+        },
+      ],
     };
     return (
-      <Slider {...settings}>
-        {data.map((b) => {
-          return (
-            <div
-              className='border-2 border-l-0 border-g-l p-2 w-40'
-              key={b.name}
-            >
-              <p className='font-regular text-black truncate text-sm'>
-                {b.name}
-              </p>
-              <p className='text-gray-600'>{b.quantity}</p>
-            </div>
-          );
-        })}
-      </Slider>
+      <div className='w-11/12 mx-auto lg:w-full'>
+        <Slider {...settings}>
+          {data.map((b) => {
+            return (
+              <div
+                className='border-2 border-l-0 border-g-l p-2 w-40'
+                key={b.name}
+              >
+                <p className='font-regular text-black truncate text-sm'>
+                  {b.name}
+                </p>
+                <p className='text-gray-600'>{b.quantity}</p>
+              </div>
+            );
+          })}
+        </Slider>
+      </div>
     );
   }
 }

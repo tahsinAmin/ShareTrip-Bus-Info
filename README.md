@@ -44,6 +44,9 @@ TODOS:
 [x] Navbar and Search Modifier needs to be fixed at the top
 [x] Ticket 3 having extra space between border and right
 [] Narbar hover color needs to be corrected.
+[] Lef space created for hidden car icons. Needs to be removed.
+[] Modify Search Button needs to be smaller.
+[] SearchModifier needs to be corrected once I get to know how to add xs breakpointx`
 
 - Make it responsive
 - How to make icons have different color when the buttons is active?
@@ -52,6 +55,7 @@ TODOS:
   <!-- npm i @material-ui/core -->
 
 Task Problem:
+[-] Unable to put xs breakpoint value in line 13 &20 in Search Modifier
 
 npm uninstalled:
 

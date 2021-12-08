@@ -5,7 +5,7 @@ export default function SearchModifier() {
   return (
     <div className='sticky top-20 z-10 shadow-md bg-primary py-2'>
       <div className='max-w-7xl mx-auto flex flex-col space-y-2 sm:flex-row items-center justify-between px-2'>
-        <div className='switch flex items-center justify-between  w-full sm:w-3/4'>
+        <div className='switch flex items-center justify-between  w-full md:w-3/4'>
           <div className='flex justify-between items-center w-full'>
             <div className='from flex px-2 bg-primary-light py-3 rounded-md space-x-2 sm:space-x-4'>
               <div className='text-white'>
@@ -77,7 +77,7 @@ export default function SearchModifier() {
             </div>
           </div>
         </div>
-        <button className='modify-search text-white bg-blue-500 px-4 py-2 shadow-md rounded-sm w-full sm:w-40'>
+        <button className='modify-search text-white bg-blue-500 px-4 py-2 shadow-md rounded-sm w-full md:w-40'>
           MODIFY SEARCH
         </button>
       </div>
