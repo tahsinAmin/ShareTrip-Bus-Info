@@ -7,7 +7,7 @@ export default function Navbar() {
   // useState is use to change the state for start it false means when we click then only its open otherwise not.
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className='shadow-sm sticky top-0 w-full z-10 bg-white'>
+    <nav className='shadow-sm sticky top-0 w-full bg-white z-30'>
       <div className='md:max-w-7xl mx-auto'>
         <div className='flex items-center h-20 w-full'>
           <div className='flex items-center px-2 justify-between w-full'>
