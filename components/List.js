@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function List() {
   return (
-    <div className='my-4 flex  '>
-      <div className='left-side w-2/3   flex flex-col p-4 border border-gray-200 rounded-l-md border-r-0'>
+    <div className='my-4 flex sm:flex-row flex-col shadow-md'>
+      <div className='left-side w-full sm:w-2/3 flex flex-col p-4 border border-r-0 border-b-0 rounded-md'>
         <div className='top flex justify-between items-center'>
           <p className='font-semibold'>AC</p>
           <div className='title'>
@@ -37,7 +37,7 @@ export default function List() {
             <p className='text-xs font-normal text-gray-600'>22 June 2021</p>
           </div>
           <div className='icon flex flex-col'>
-            <div className='relative h-8 w-40 cursor-pointer my-auto'>
+            <div className='relative h-6 sm:h-8 w-30 sm:w-40 cursor-pointer my-auto'>
               <Image
                 src='/img/car-direction.png'
                 layout='fill'
@@ -62,15 +62,18 @@ export default function List() {
           </div>
         </div>
       </div>
-      <div className='right-side w-1/3 p-4 bg-blue-200 flex flex-col space-y-3 text-right rounded-r-md'>
+
+      <div className='right-side w-full sm:w-1/3 p-4 bg-blue-200 flex flex-row sm:flex-col justify-between space-y-3 text-center sm:text-right rounded-r-md'>
         <div className='flex flex-col'>
           <p className='text-xs font-semibold'>Per Person</p>
-          <p className='text-2xl text-blue-700 font-semibold'>BDT 750</p>
+          <p className='text-xl text-blue-700 font-semibold'>BDT 750</p>
           <p className='text-md font-semibold text-blue-600'>BDT 755</p>
         </div>
-        <button className=' relative left-36 w-32 text-md bg-blue-500 py-2 px-4 uppercase text-white rounded-md'>
-          View Seats
-        </button>
+        <div className='flex sm:relative'>
+          <button className='sm:absolute sm:right-0 sm:bottom-2 w-32 text-md bg-blue-500 py-2 px-4 uppercase text-white rounded-md'>
+            View Seats
+          </button>
+        </div>
       </div>
     </div>
   );

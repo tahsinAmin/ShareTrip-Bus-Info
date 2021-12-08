@@ -22,7 +22,7 @@ export default function BusInfo() {
         <SwipeToSlide />
       </div> */}
       <Panel />
-      {/* <List /> */}
+      <List />
     </div>
   );
 }

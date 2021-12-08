@@ -8,7 +8,7 @@ export default function Home() {
       <main>
         <SearchModifier />
         {/* <BusInfo /> */}
-        <div className='flex mt-4 max-w-7xl mx-auto space-x-4'>
+        <div className='lg:flex mt-4 max-w-7xl lg:mx-auto lg:space-x-4'>
           <FilterPanel />
           <BusInfo />
         </div>

@@ -47,6 +47,8 @@ TODOS:
 [] Lef space created for hidden car icons. Needs to be removed.
 [] Modify Search Button needs to be smaller.
 [] SearchModifier needs to be corrected once I get to know how to add xs breakpointx`
+[] Filter model remains
+[] Navbar needs to be corrected. Doens;t look good in Iphone X responsive
 
 - Make it responsive
 - How to make icons have different color when the buttons is active?
