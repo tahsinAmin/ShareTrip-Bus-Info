@@ -27,14 +27,14 @@ Problems Faced:
 [] Lef space created for hidden car icons. Needs to be removed.
 [] SearchModifier needs to be corrected once I get to know how to add xs breakpoint
 
-Things I have learned through this:
+<!-- Things I have learned through this:
 
 - Adding Custom Colors
 - React Slick
 - Customizing Carousal
 - Tailwind on how to use ::before => before:none before:h-0
 - To give border 1px, just write border, that's all
-- Navbar using Headless UI
+- Navbar using Headless UI -->
 
 <!-- npm uninstalled: -->
   <!-- npm i @material-ui/icons -->
