@@ -18,9 +18,9 @@ export default function BusInfo() {
           />
         </div>
       </div>
-      {/* <div className='ml-10 mr-6 mb-5 shadow-md mt-4'>
+      <div className='ml-10 mr-6 mb-5 shadow-md mt-4'>
         <SwipeToSlide />
-      </div> */}
+      </div>
       <Panel />
       <List />
     </div>
