@@ -42,7 +42,7 @@ export default function Navbar() {
                   smooth={true}
                   offset={50}
                   duration={500}
-                  className='cursor-pointer text-blue-600 font-semibold  py-2 text-sm hover:font-black'
+                  className='cursor-pointer text-blue-600 hover:cursor-default font-semibold  py-2 text-sm'
                 >
                   Flight
                 </Link>
@@ -52,7 +52,7 @@ export default function Navbar() {
                   smooth={true}
                   offset={50}
                   duration={500}
-                  className='cursor-pointer hover:bg-blue-600 text-black  hover:text-white  py-2 text-sm font-medium'
+                  className='cursor-pointer hover:scale-105 text-black  py-2 text-sm font-medium'
                 >
                   Bus
                 </Link>
@@ -62,7 +62,7 @@ export default function Navbar() {
                   smooth={true}
                   offset={50}
                   duration={500}
-                  className='cursor-pointer hover:bg-blue-600 text-black  hover:text-white  py-2 text-sm font-medium'
+                  className='cursor-pointer hover:scale-105 text-black py-2 text-sm font-medium'
                 >
                   Hotel
                 </Link>
@@ -72,7 +72,7 @@ export default function Navbar() {
                   smooth={true}
                   offset={50}
                   duration={500}
-                  className='cursor-pointer hover:bg-blue-600 text-black  hover:text-white  py-2 text-sm font-medium'
+                  className='cursor-pointer text-black hover:scale-105 py-2 text-sm font-medium'
                 >
                   Holiday
                 </Link>
@@ -82,7 +82,7 @@ export default function Navbar() {
                   smooth={true}
                   offset={50}
                   duration={500}
-                  className='cursor-pointer hover:bg-black text-black  hover:text-white  py-2 text-sm font-medium'
+                  className='cursor-pointer hover:scale-105 text-black    py-2 text-sm font-medium'
                 >
                   Visa
                 </Link>
@@ -92,7 +92,7 @@ export default function Navbar() {
                   smooth={true}
                   offset={50}
                   duration={500}
-                  className='cursor-pointer truncate hover:bg-black text-black  hover:text-white  py-2 text-sm font-medium'
+                  className='cursor-pointer truncate hover:scale-105 text-black    py-2 text-sm font-medium'
                 >
                   Visa Guide
                 </Link>
@@ -102,7 +102,7 @@ export default function Navbar() {
                   smooth={true}
                   offset={50}
                   duration={500}
-                  className='sm:hidden md:block truncate cursor-pointer hover:bg-black text-black  hover:text-white  py-2 text-sm font-medium'
+                  className='sm:hidden md:block truncate cursor-pointer hover:scale-105 text-black    py-2 text-sm font-medium'
                 >
                   Group Request
                 </Link>
@@ -112,7 +112,7 @@ export default function Navbar() {
                   smooth={true}
                   offset={50}
                   duration={500}
-                  className='sm:hidden lg:block truncate cursor-pointer hover:bg-black text-black  hover:text-white  py-2 text-sm font-medium'
+                  className='sm:hidden lg:block truncate cursor-pointer hover:scale-105 text-black    py-2 text-sm font-medium'
                 >
                   Travel Advisory
                 </Link>
@@ -122,7 +122,7 @@ export default function Navbar() {
                   smooth={true}
                   offset={50}
                   duration={500}
-                  className='sm:hidden lg:block cursor-pointer hover:bg-black text-black  hover:text-white  py-2 text-sm font-medium'
+                  className='sm:hidden lg:block cursor-pointer hover:scale-105 text-black    py-2 text-sm font-medium'
                 >
                   Promotions
                 </Link>
@@ -132,7 +132,7 @@ export default function Navbar() {
                   smooth={true}
                   offset={50}
                   duration={500}
-                  className='sm:hidden xl:block cursor-pointer hover:bg-black text-black  hover:text-white  py-2 text-sm font-medium'
+                  className='sm:hidden xl:block cursor-pointer hover:scale-105 text-black    py-2 text-sm font-medium'
                 >
                   Blog
                 </Link>
@@ -169,7 +169,7 @@ export default function Navbar() {
             <button
               onClick={() => setIsOpen(!isOpen)}
               type='button'
-              className='bg-blue-600 inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-blue-600 focus:outline-none focus:ring-offset-2 focus:ring0offset-blue-800 focus:ring-white'
+              className='bg-blue-600 inline-flex items-center justify-center p-2 rounded-md text-white  focus:outline-none focus:ring-offset-2 focus:ring0offset-blue-800 focus:ring-white'
               aria-controls='mobile-menu'
               aria-expanded='false'
             >
@@ -237,7 +237,7 @@ export default function Navbar() {
                 smooth={true}
                 offset={50}
                 duration={500}
-                className='cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium'
+                className='cursor-pointer  text-black  block px-3 py-2 rounded-md text-base font-medium'
               >
                 Flight
               </Link>
@@ -248,7 +248,7 @@ export default function Navbar() {
                 smooth={true}
                 offset={50}
                 duration={500}
-                className='cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium'
+                className='cursor-pointer  text-black  block px-3 py-2 rounded-md text-base font-medium'
               >
                 Bus
               </Link>
@@ -260,7 +260,7 @@ export default function Navbar() {
                 smooth={true}
                 offset={50}
                 duration={500}
-                className='cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium'
+                className='cursor-pointer  text-black  block px-3 py-2 rounded-md text-base font-medium'
               >
                 Projects
               </Link>
@@ -271,7 +271,7 @@ export default function Navbar() {
                 smooth={true}
                 offset={50}
                 duration={500}
-                className='cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium'
+                className='cursor-pointer  text-black  block px-3 py-2 rounded-md text-base font-medium'
               >
                 holiday
               </Link>
@@ -283,7 +283,7 @@ export default function Navbar() {
                 smooth={true}
                 offset={50}
                 duration={500}
-                className='cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium'
+                className='cursor-pointer  text-black  block px-3 py-2 rounded-md text-base font-medium'
               >
                 visa
               </Link>
@@ -295,7 +295,7 @@ export default function Navbar() {
                 smooth={true}
                 offset={50}
                 duration={500}
-                className='cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium'
+                className='cursor-pointer  text-black  block px-3 py-2 rounded-md text-base font-medium'
               >
                 Visa Guide
               </Link>
@@ -307,7 +307,7 @@ export default function Navbar() {
                 smooth={true}
                 offset={50}
                 duration={500}
-                className='cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium'
+                className='cursor-pointer  text-black  block px-3 py-2 rounded-md text-base font-medium'
               >
                 Group Request
               </Link>
@@ -319,7 +319,7 @@ export default function Navbar() {
                 smooth={true}
                 offset={50}
                 duration={500}
-                className='cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium'
+                className='cursor-pointer  text-black  block px-3 py-2 rounded-md text-base font-medium'
               >
                 Travel Advisory
               </Link>
@@ -331,7 +331,7 @@ export default function Navbar() {
                 smooth={true}
                 offset={50}
                 duration={500}
-                className='cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium'
+                className='cursor-pointer  text-black  block px-3 py-2 rounded-md text-base font-medium'
               >
                 Promotions
               </Link>
@@ -343,7 +343,7 @@ export default function Navbar() {
                 smooth={true}
                 offset={50}
                 duration={500}
-                className='cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium'
+                className='cursor-pointer  text-black  block px-3 py-2 rounded-md text-base font-medium'
               >
                 Blog
               </Link>
@@ -357,7 +357,7 @@ export default function Navbar() {
                 smooth={true}
                 offset={50}
                 duration={500}
-                className='cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium'
+                className='cursor-pointer  text-black  block px-3 py-2 rounded-md text-base font-medium'
               >
                 Sign In
               </Link>
@@ -369,7 +369,7 @@ export default function Navbar() {
                 smooth={true}
                 offset={50}
                 duration={500}
-                className='cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium'
+                className='cursor-pointer  text-black  block px-3 py-2 rounded-md text-base font-medium'
               >
                 Create an Account
               </Link>

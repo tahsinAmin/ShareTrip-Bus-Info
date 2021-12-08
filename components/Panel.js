@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-// import { ArrowBackIos, ArrowForwardIos, DiamondIos } from "@material-ui/icons";
 
 export default function Panel() {
   return (
