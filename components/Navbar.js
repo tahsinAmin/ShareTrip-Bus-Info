@@ -12,7 +12,7 @@ export default function Navbar() {
         <div className='flex items-center h-20 w-full'>
           <div className='flex items-center px-2 justify-between w-full'>
             <a href='#' className='Brand flex'>
-              <div className='hidden sm:block relative h-12 w-48  cursor-pointer my-auto'>
+              <div className='relative h-10 sm:h-12 w-44 sm:w-48  cursor-pointer my-auto'>
                 <Image
                   src='/img/navbar-brand.png'
                   layout='fill'
@@ -20,14 +20,14 @@ export default function Navbar() {
                   className=''
                 />
               </div>
-              <div className='block sm:hidden relative h-8 w-8  cursor-pointer my-auto'>
+              {/* <div className='block sm:hidden relative h-8 w-8  cursor-pointer my-auto'>
                 <Image
                   src='/img/circle-icon.png'
                   layout='fill'
                   objectFit='cover'
                   className=''
                 />
-              </div>
+              </div> */}
             </a>
             {/* For small screen we don't show tabs that's why written hiddenand on medium device i.e. md
             We want them as block */}
@@ -164,7 +164,7 @@ export default function Navbar() {
           </div>
           {/* Now we hotel on mobile responsive */}
 
-          <div className='mr-10 flex md:hidden'>
+          <div className='mr-4 flex md:hidden pb-4 h-auto'>
             {/* It has some property like when we click what will happen on mobile */}
             <button
               onClick={() => setIsOpen(!isOpen)}

@@ -1,32 +1,31 @@
 # Next.js + Tailwind CSS Example
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
-
-It uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) for Tailwind CSS.
-
 ## Preview
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+Preview the example live on [Vercel](https://share-trip-bus-info.vercel.app/):
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+## Design Preview
 
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+Preview the example on [Figma](<https://www.figma.com/file/N5c8NTiBf14GzHIQ6MAzED/Bus-UI-Test-for-Candidates-(Copy)?node-id=0%3A1>):
 
 ## How to use
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+Download the Project
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
+Write npm insatll in the vs code terminal. After that, write npm run dev
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+Problems Faced:
+[x] Panels items shouldn't be at center but rather left with left padding
+[x] When I inspect it to 1920, the width increase along the width screen. It should be stick no matter how much increases.
+[x] Navbar and Search Modifier needs to be fixed at the top
+[x] Ticket 3 having extra space between border and right
+[X] Narbar hover color needs to be corrected.
+[X] Make it responsive
+[X] Navbar needs to be corrected. Doesn't look good in Iphone X responsive
+[] Filter model remains
+[] Unable to put xs breakpoint value in line 13 &20 in Search Modifier
+[] Lef space created for hidden car icons. Needs to be removed.
+[] SearchModifier needs to be corrected once I get to know how to add xs breakpoint
 
 Things I have learned through this:
 
@@ -37,29 +36,8 @@ Things I have learned through this:
 - To give border 1px, just write border, that's all
 - Navbar using Headless UI
 
-TODOS:
-
-[x] Panels items shouldn't be at center but rather left with left padding
-[x] When I inspect it to 1920, the width increase along the width screen. It should be stick no matter how much increases.
-[x] Navbar and Search Modifier needs to be fixed at the top
-[x] Ticket 3 having extra space between border and right
-[] Narbar hover color needs to be corrected.
-[] Lef space created for hidden car icons. Needs to be removed.
-[] Modify Search Button needs to be smaller.
-[] SearchModifier needs to be corrected once I get to know how to add xs breakpointx`
-[] Filter model remains
-[] Navbar needs to be corrected. Doens;t look good in Iphone X responsive
-
-- Make it responsive
-- How to make icons have different color when the buttons is active?
-
+<!-- npm uninstalled: -->
   <!-- npm i @material-ui/icons -->
   <!-- npm i @material-ui/core -->
-
-Task Problem:
-[-] Unable to put xs breakpoint value in line 13 &20 in Search Modifier
-
-npm uninstalled:
-
 <!-- npm install react-slick -->
 <!-- npm install slick-carousal -->

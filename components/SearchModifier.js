@@ -77,7 +77,7 @@ export default function SearchModifier() {
             </div>
           </div>
         </div>
-        <button className='modify-search text-white bg-blue-500 px-4 py-2 shadow-md rounded-sm w-full md:w-40'>
+        <button className='modify-search text-white text-sm bg-blue-500 px-4 py-2 shadow-md rounded-sm w-full md:w-40'>
           MODIFY SEARCH
         </button>
       </div>
