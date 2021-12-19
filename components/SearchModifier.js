@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function SearchModifier() {
   return (
-    <div className='sticky top-20 z-10 shadow-md bg-primary py-2'>
+    <div className='sticky top-20 z-30 shadow-md bg-primary py-2'>
       <div className='max-w-7xl mx-auto flex flex-col space-y-2 sm:flex-row items-center justify-between px-2'>
         <div className='switch flex items-center justify-between  w-full md:w-3/4'>
           <div className='flex justify-between items-center w-full'>

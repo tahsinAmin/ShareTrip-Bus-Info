@@ -1,21 +1,19 @@
 import React from "react";
-import Panel from "./Panel";
-import SwipeToSlide from "./SwipeToSlide";
-import List from "./List";
-import Image from "next/image";
 import { FilterIcon } from "@heroicons/react/outline";
+import SwipeToSlide from "./SwipeToSlide";
+import Panel from "./Panel";
+import List from "./List";
 
-export default function BusInfo() {
+export default function BusInfo({ openSideBar }) {
   return (
     <div className='w-full lg:w-3/4'>
-      <div className='flex items-center justify-between mx-2'>
-        <h4 className='font-semibold'>48 Available Buses</h4>
-        {/* Modal toggle */}
-        <button className='lg:hidden sidebar-toggle'>
-          <FilterIcon className='h-7 w-7 text-blue-500' />
+      <div className=''>
+        <button className='sidebar-toggle' onClick={openSideBar}>
+          <FilterIcon className='lg:hidden h-7 w-7 text-blue-500' />
         </button>
+        <h4 className='font-semibold ml-2'>48 Available Buses</h4>
       </div>
-      <div className='ml-10 mr-6 mb-5 shadow-md mt-4'>
+      <div className='lg:mx-6 my-5 shadow-md'>
         <SwipeToSlide />
       </div>
       <Panel />
