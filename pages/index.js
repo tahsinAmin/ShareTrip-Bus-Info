@@ -34,3 +34,4 @@ export default function Home() {
 }
 
 // ss => Maybe sidebar finished, need to check it one more time. But, yes the overlay is needed
+// First printscrenn and paste it in figma and see our screen dimension. then according to that, we'll have number of slides in the carousal.
